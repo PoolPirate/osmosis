@@ -156,6 +156,23 @@ message MsgSetMaxPoolPointsPerBlock {
 // Msg/SetMaxPoolPointsPerBlock response type.
 message MsgSetMaxPoolPointsPerBlockResponse {}
 
+// MsgSetPoolWeights defines the Msg/SetPoolWeights request type.
+message MsgSetPoolWeights {
+  // admin is the account that is authorized to set the pool weights.
+  string admin = 1 [
+    (gogoproto.moretags) = "yaml:\"admin\"",
+    (cosmos_proto.scalar) = "cosmos.AddressString"
+  ];
+  // pool_weights is the list of pool weights to set.
+  PoolWeights pool_weights = 2 [
+    (gogoproto.moretags) = "yaml:\"pool_weights\"",
+    (gogoproto.nullable) = false
+  ];
+}
+
+// MsgSetPoolWeightsResponse defines the Msg/SetPoolWeights response type.
+message MsgSetPoolWeightsResponse {}
+
 // MsgSetBaseDenoms defines the Msg/SetBaseDenoms request type.
 message MsgSetBaseDenoms {
   option (amino.name) = "osmosis/MsgSetBaseDenoms";
