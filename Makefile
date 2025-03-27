@@ -152,12 +152,6 @@ update-deps:
 		echo "Extracted SDK version: $${SDK_VERSION}"; \
 		sed -i.bak "s|github.com/cosmos/cosmos-sdk => github.com/osmosis-labs/cosmos-sdk .*|github.com/cosmos/cosmos-sdk => github.com/osmosis-labs/cosmos-sdk $${SDK_VERSION}|" go.mod; \
 	fi
-	@if [ -n "$(COMET_HASH)" ]; then \
-		echo "Updating cometbft to hash $(COMET_HASH)"; \
-		COMET_VERSION=$$(go get github.com/PoolPirate/cometbft@$(COMET_HASH) 2>&1 | sed -n 's/.*github.com\/osmosis-labs\/cometbft@\([^ :]*\).*/\1/p'); \
-		echo "Extracted Comet version: $${COMET_VERSION}"; \
-		sed -i.bak "s|github.com/cometbft/cometbft => github.com/PoolPirate/cometbft .*|github.com/cometbft/cometbft => github.com/PoolPirate/cometbft $${COMET_VERSION}|" go.mod; \
-	fi
 	@if [ -n "$(SDK_HASH)" ] || [ -n "$(COMET_HASH)" ]; then \
 		go mod tidy; \
 	fi

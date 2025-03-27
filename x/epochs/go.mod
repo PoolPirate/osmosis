@@ -176,10 +176,7 @@ require (
 )
 
 replace (
-	// Direct cometbft branch link: https://github.com/PoolPirate/cometbft/tree/osmo-v28/0.38.17, current branch: osmo-v28/v0.38.17
-	// Direct commit link: https://github.com/PoolPirate/cometbft/commit/58bfcdcb2fdd81655586678c2062cdc51adbdf0d
-	// Direct tag link: https://github.com/PoolPirate/cometbft/releases/tag/v0.38.17-v28-osmo-1
-	github.com/cometbft/cometbft => github.com/PoolPirate/cometbft v0.38.17-v28-osmo-1
+	github.com/cometbft/cometbft => github.com/PoolPirate/cometbft v0.0.0-20250327110745-eea4b629e454
 
 	// Direct cosmos-sdk branch link: https://github.com/osmosis-labs/cosmos-sdk/tree/osmo-v28/0.50.11, current branch: osmo-v28/0.50.11
 	// Direct commit link: https://github.com/osmosis-labs/cosmos-sdk/commit/eb1a8e88a4ddf77bc2fe235fc07c57016b7386f0
