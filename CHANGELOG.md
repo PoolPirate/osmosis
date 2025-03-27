@@ -191,16 +191,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### CometBFT v0.37.4-v25-osmo-12
 
-* [#128](https://github.com/osmosis-labs/cometbft/pull/128) feat(p2p): render HasChannel(chID) is a public p2p.Peer method (#3510)
+* [#128](https://github.com/PoolPirate/cometbft/pull/128) feat(p2p): render HasChannel(chID) is a public p2p.Peer method (#3510)
 * [#126]() Remove p2p allocations for wrapping outbound packets
 * [#125]() Fix marshalling and concurrency overhead within broadcast routines
 * perf(p2p): Only update send monitor once per batch packet msg send (#3382)
 * [#124]() Secret connection read buffer
-* [#123](https://github.com/osmosis-labs/cometbft/pull/123) perf(p2p/conn): Remove unneeded global pool buffers in secret connection #3403
+* [#123](https://github.com/PoolPirate/cometbft/pull/123) perf(p2p/conn): Remove unneeded global pool buffers in secret connection #3403
 * perf(p2p): Delete expensive debug log already slated for deletion #3412
 * perf(p2p): Reduce the p2p metrics overhead. #3411
 * commit f663bd35153b0b366c1e1e6b41e7f2dcff7963fd : one more debug log deletion
-* [#120](https://github.com/osmosis-labs/cometbft/pull/120) perf(consensus): Use TrySend for hasVote/HasBlockPart messages #3407
+* [#120](https://github.com/PoolPirate/cometbft/pull/120) perf(consensus): Use TrySend for hasVote/HasBlockPart messages #3407
 
 * [#8504](https://github.com/osmosis-labs/osmosis/pull/8504) Add missing module params query to CLI
 
@@ -246,11 +246,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### CometBFT
 
-* [#73](https://github.com/osmosis-labs/cometbft/pull/73) perf(consensus/blockexec): Add simplistic block validation cache
-* [#74](https://github.com/osmosis-labs/cometbft/pull/74) perf(consensus): Minor speedup to mark late vote metrics
-* [#75](https://github.com/osmosis-labs/cometbft/pull/75) perf(p2p): 4% speedup to readMsg by removing one allocation
-* [#76](https://github.com/osmosis-labs/cometbft/pull/76) perf(consensus): Add LRU caches for blockstore operations used in gossip
-* [#77](https://github.com/osmosis-labs/cometbft/pull/77) perf(consensus): Make every gossip thread use its own randomness instance, reducing mutex contention
+* [#73](https://github.com/PoolPirate/cometbft/pull/73) perf(consensus/blockexec): Add simplistic block validation cache
+* [#74](https://github.com/PoolPirate/cometbft/pull/74) perf(consensus): Minor speedup to mark late vote metrics
+* [#75](https://github.com/PoolPirate/cometbft/pull/75) perf(p2p): 4% speedup to readMsg by removing one allocation
+* [#76](https://github.com/PoolPirate/cometbft/pull/76) perf(consensus): Add LRU caches for blockstore operations used in gossip
+* [#77](https://github.com/PoolPirate/cometbft/pull/77) perf(consensus): Make every gossip thread use its own randomness instance, reducing mutex contention
 
 ## v25.0.1
 
@@ -265,10 +265,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### CometBFT
 
-* [#61](https://github.com/osmosis-labs/cometbft/pull/61) refactor(p2p/connection): Slight refactor to sendManyPackets that helps highlight performance improvements (backport #2953) (#2978)
-* [#62](https://github.com/osmosis-labs/cometbft/pull/62) perf(consensus/blockstore): Remove validate basic call from LoadBlock
-* [#69](https://github.com/osmosis-labs/cometbft/pull/69) perf: Make mempool update async from block.Commit (#3008)
-* [#67](https://github.com/osmosis-labs/cometbft/pull/67) fix: TimeoutTicker returns wrong value/timeout pair when timeouts are scheduled at the same time
+* [#61](https://github.com/PoolPirate/cometbft/pull/61) refactor(p2p/connection): Slight refactor to sendManyPackets that helps highlight performance improvements (backport #2953) (#2978)
+* [#62](https://github.com/PoolPirate/cometbft/pull/62) perf(consensus/blockstore): Remove validate basic call from LoadBlock
+* [#69](https://github.com/PoolPirate/cometbft/pull/69) perf: Make mempool update async from block.Commit (#3008)
+* [#67](https://github.com/PoolPirate/cometbft/pull/67) fix: TimeoutTicker returns wrong value/timeout pair when timeouts are scheduled at the same time
 
 ### IBC-go
 
@@ -295,13 +295,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### State Compatible
 
-* [#35](https://github.com/osmosis-labs/cometbft/pull/35) Handle last element in PickRandom
-* [#38](https://github.com/osmosis-labs/cometbft/pull/38) Remove expensive Logger debug call in PublishEventTx
-* [#39](https://github.com/osmosis-labs/cometbft/pull/39) Change finalizeCommit to use applyVerifiedBlock
-* [#40](https://github.com/osmosis-labs/cometbft/pull/40) Speedup NewDelimitedWriter
-* [#41](https://github.com/osmosis-labs/cometbft/pull/41) Remove unnecessary atomic read
-* [#42](https://github.com/osmosis-labs/cometbft/pull/42) Remove a minint call that was appearing in write packet delays
-* [#43](https://github.com/osmosis-labs/cometbft/pull/43) Speedup extended commit.BitArray()
+* [#35](https://github.com/PoolPirate/cometbft/pull/35) Handle last element in PickRandom
+* [#38](https://github.com/PoolPirate/cometbft/pull/38) Remove expensive Logger debug call in PublishEventTx
+* [#39](https://github.com/PoolPirate/cometbft/pull/39) Change finalizeCommit to use applyVerifiedBlock
+* [#40](https://github.com/PoolPirate/cometbft/pull/40) Speedup NewDelimitedWriter
+* [#41](https://github.com/PoolPirate/cometbft/pull/41) Remove unnecessary atomic read
+* [#42](https://github.com/PoolPirate/cometbft/pull/42) Remove a minint call that was appearing in write packet delays
+* [#43](https://github.com/PoolPirate/cometbft/pull/43) Speedup extended commit.BitArray()
 * [#8226](https://github.com/osmosis-labs/osmosis/pull/8226) Overwrite timeoutPropose from 3s to 2s
 
 ## v24.0.4
@@ -311,9 +311,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## v24.0.3
 
-* [#21](https://github.com/osmosis-labs/cometbft/pull/21) Move websocket logs to Debug
-* [#22](https://github.com/osmosis-labs/cometbft/pull/22) Fix txSearch pagination performance issues
-* [#25](https://github.com/osmosis-labs/cometbft/pull/25) Optimize merkle tree hashing
+* [#21](https://github.com/PoolPirate/cometbft/pull/21) Move websocket logs to Debug
+* [#22](https://github.com/PoolPirate/cometbft/pull/22) Fix txSearch pagination performance issues
+* [#25](https://github.com/PoolPirate/cometbft/pull/25) Optimize merkle tree hashing
 
 ## v24.0.2
 
@@ -377,10 +377,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### CometBFT
 
-* [#5](https://github.com/osmosis-labs/cometbft/pull/5) Batch verification
-* [#11](https://github.com/osmosis-labs/cometbft/pull/11) Skip verification of commit sigs
-* [#13](https://github.com/osmosis-labs/cometbft/pull/13) Avoid double-saving ABCI responses
-* [#20](https://github.com/osmosis-labs/cometbft/pull/20) Fix the rollback command
+* [#5](https://github.com/PoolPirate/cometbft/pull/5) Batch verification
+* [#11](https://github.com/PoolPirate/cometbft/pull/11) Skip verification of commit sigs
+* [#13](https://github.com/PoolPirate/cometbft/pull/13) Avoid double-saving ABCI responses
+* [#20](https://github.com/PoolPirate/cometbft/pull/20) Fix the rollback command
 
 ## v23.0.12-iavl-v1
 
@@ -430,8 +430,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * [#7590](https://github.com/osmosis-labs/osmosis/pull/7590) fix cwpool migration prop disallowing only one of code id or bytecode.
 * [#7577](https://github.com/osmosis-labs/osmosis/pull/7577) Update to sdk math v1.3.0
 * [#7598](https://github.com/osmosis-labs/osmosis/pull/7598) Remove extra code path in tickToPrice
-* [#3](https://github.com/osmosis-labs/cometbft/pull/3) Avoid double-calling types.BlockFromProto
-* [#4](https://github.com/osmosis-labs/cometbft/pull/4) Do not validatorBlock twice
+* [#3](https://github.com/PoolPirate/cometbft/pull/3) Avoid double-calling types.BlockFromProto
+* [#4](https://github.com/PoolPirate/cometbft/pull/4) Do not validatorBlock twice
 
 ## v23.0.0
 

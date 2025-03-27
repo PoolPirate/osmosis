@@ -30,7 +30,7 @@ jobs:
           MODFILES="./go.mod ./osmoutils/go.mod ./osmomath/go.mod ./x/epochs/go.mod ./x/ibc-hooks/go.mod"
           for modfile in $MODFILES; do
             if [ -e "$modfile" ]; then
-              sed -i "s|github.com/osmosis-labs/cometbft v[0-9a-zA-Z.\-]*|github.com/osmosis-labs/cometbft $VERSION|g" $modfile
+              sed -i "s|github.com/PoolPirate/cometbft v[0-9a-zA-Z.\-]*|github.com/PoolPirate/cometbft $VERSION|g" $modfile
               cd `dirname $modfile`
               go mod tidy
               cd - > /dev/null
@@ -44,12 +44,12 @@ jobs:
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          title: "auto: update osmosis-labs/cometbft to ${{ github.event.inputs.version }}"
-          commit-message: "auto: update osmosis-labs/cometbft to ${{ github.event.inputs.version }}"
+          title: "auto: update PoolPirate/cometbft to ${{ github.event.inputs.version }}"
+          commit-message: "auto: update PoolPirate/cometbft to ${{ github.event.inputs.version }}"
           body: |
             **Automated pull request**
 
-            Updating osmosis-labs/cometbft dependency to the specified version ${{ github.event.inputs.version }}.
+            Updating PoolPirate/cometbft dependency to the specified version ${{ github.event.inputs.version }}.
           base: ${{ github.event.inputs.branch }}
           branch-suffix: random
           delete-branch: true
