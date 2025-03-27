@@ -176,7 +176,7 @@ require (
 )
 
 replace (
-	github.com/cometbft/cometbft => github.com/PoolPirate/cometbft v0.0.0-20250327110745-eea4b629e454
+	github.com/cometbft/cometbft => github.com/PoolPirate/cometbft test-6
 
 	// Direct cosmos-sdk branch link: https://github.com/osmosis-labs/cosmos-sdk/tree/osmo-v28/0.50.11, current branch: osmo-v28/0.50.11
 	// Direct commit link: https://github.com/osmosis-labs/cosmos-sdk/commit/eb1a8e88a4ddf77bc2fe235fc07c57016b7386f0
