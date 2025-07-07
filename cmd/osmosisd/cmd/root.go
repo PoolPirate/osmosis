@@ -142,7 +142,7 @@ var (
 		{
 			Section: "p2p",
 			Key:     "flush_throttle_timeout",
-			Value:   "80ms",
+			Value:   "10ms",
 		},
 		{
 			Section: "consensus",
@@ -157,7 +157,7 @@ var (
 		{
 			Section: "consensus",
 			Key:     "peer_gossip_sleep_duration",
-			Value:   "50ms",
+			Value:   "10ms",
 		},
 	}
 )
