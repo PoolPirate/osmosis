@@ -308,6 +308,8 @@ replace (
 	// coinbase/rosetta-sdk-go is not longer maintained/available, we use the mesh-sdk-go fork instead
 	github.com/coinbase/rosetta-sdk-go/types v1.0.0 => github.com/coinbase/mesh-sdk-go/types v1.0.0-beta1
 
+	github.com/cometbft/cometbft => github.com/Farsight-CDA/cometbft v0.38.17-custom
+
 	// Direct cosmos-sdk branch link: https://github.com/osmosis-labs/cosmos-sdk/tree/osmo-v30/0.50.14, current branch: osmo-v30/0.50.14
 	// Direct commit link: https://github.com/osmosis-labs/cosmos-sdk/commit/1f78f02de9b2f60779c5062686201b45361fcb3f
 	// Direct tag link: https://github.com/osmosis-labs/cosmos-sdk/releases/tag/v0.50.14-v30-osmo
@@ -321,6 +323,7 @@ replace (
 
 	// replace as directed by sdk upgrading.md https://github.com/cosmos/cosmos-sdk/blob/393de266c8675dc16cc037c1a15011b1e990975f/UPGRADING.md?plain=1#L713
 	github.com/syndtr/goleveldb => github.com/syndtr/goleveldb v1.0.1-0.20210819022825-2ae1ddf74ef7
+
 // // Local replaces commented for development
 // github.com/osmosis-labs/osmosis/osmomath => ./osmomath
 // github.com/osmosis-labs/osmosis/osmoutils => ./osmoutils
