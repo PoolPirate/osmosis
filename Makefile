@@ -44,7 +44,7 @@ LEDGER_ENABLED ?= true
 SDK_PACK := $(shell go list -m github.com/cosmos/cosmos-sdk | sed  's/ /\@/g')
 BUILDDIR ?= $(CURDIR)/build
 DOCKER := $(shell which docker)
-E2E_UPGRADE_VERSION := "v31"
+E2E_UPGRADE_VERSION := "v32"
 #SHELL := /bin/bash
 
 # Go version to be used in docker images
@@ -212,7 +212,9 @@ go-mock-update:
 ###############################################################################
 ###                                Release                                  ###
 ###############################################################################
-GORELEASER_IMAGE := ghcr.io/goreleaser/goreleaser-cross:v$(GO_MAJOR_MINOR)
+# wasmvm v2.2.9 (wasmer 7) needs macOS SDK 14+ to link darwin/arm64.
+# goreleaser-cross v1.26 has MacOSX26.1.sdk. v1.23 only has MacOSX12.0.sdk.
+GORELEASER_IMAGE := ghcr.io/goreleaser/goreleaser-cross:v1.26
 COSMWASM_VERSION := $(shell go list -m github.com/CosmWasm/wasmvm/v2 | sed 's/.* //')
 
 ifdef GITHUB_TOKEN
